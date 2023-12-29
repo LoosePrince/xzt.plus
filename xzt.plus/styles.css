@@ -1,0 +1,491 @@
+#_copy {
+    align-items: center;
+    background: #4494d5;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-size: 13px;
+    height: 30px;
+    justify-content: center;
+    position: absolute;
+    width: 60px;
+    z-index: 1000
+}
+
+#select-tooltip,
+#sfModal,
+.modal-backdrop,
+div[id^=reader-helper] {
+    display: none !important
+}
+
+.modal-open {
+    overflow: auto !important
+}
+
+._sf_adjust_body {
+    padding-right: 0 !important
+}
+
+.enable_copy_btns_div {
+    position: fixed;
+    width: 154px;
+    left: 10px;
+    top: 45%;
+    background: #e7f1ff;
+    border: 2px solid #4595d5;
+    font-weight: 600;
+    border-radius: 2px;
+    font-family: 'Arial', sans-serif;
+    z-index: 5000
+}
+
+.enable_copy_btns_logo {
+    width: 100%;
+    background: #4595d5;
+    text-align: center;
+    font-size: 12px;
+    color: #e7f1ff;
+    line-height: 30px;
+    height: 30px
+}
+
+.enable_copy_btns_btn {
+    display: block;
+    width: 128px;
+    height: 28px;
+    background: #7f5711;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 12px;
+    border: 0;
+    outline: 0;
+    margin: 8px auto;
+    font-weight: 700;
+    cursor: pointer;
+    opacity: .9
+}
+
+.enable_copy_btns_btn:hover {
+    opacity: .8
+}
+
+.enable_copy_btns_btn:active {
+    opacity: 1
+}
+
+.artalk>.atk-list>.atk-list-footer .atk-copyright {
+    display: block;
+    font-size: 0;
+    padding-right: 0;
+    visibility: hidden;
+}
+
+/* 全局样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    /*background-color: #f7f7f7;*/
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-image: url('bj1.webp');
+    background-size: cover;
+    /* 背景图像覆盖整个元素 */
+    background-position: center;
+    /* 背景图像居中显示 */
+    background-repeat: no-repeat;
+    /* 背景图像不重复 */
+    background-attachment: fixed;
+    /* 背景图像固定，滚动时不随页面移动 */
+}
+
+/* 页头样式 */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 40px 0;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+    backdrop-filter: blur(10px);
+    /* 设置磨砂效果 */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* 设置背景色为半透明白色 */
+    border-radius: 0 0 8px 8px;
+}
+
+header:hover {
+    transform: translateY(-10px);
+}
+
+header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #eee;
+    transition: all 0.5s;
+}
+
+header img:hover {
+    transform: rotate(360deg);
+}
+
+header h1 {
+    margin: 10px 0;
+}
+
+header p,
+header a {
+    color: #555;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+header a:hover {
+    color: #000;
+}
+
+/*去除a标签默认样式*/
+.no-style {
+    color: inherit;
+    /* 继承父元素的文字颜色 */
+    text-decoration: none;
+    /* 去除下划线 */
+    font-weight: inherit;
+    /* 继承父元素的字体粗细 */
+    font-style: inherit;
+    /* 继承父元素的字体样式，例如斜体 */
+    /* 添加任何其他需要重置的样式 */
+}
+
+/* 你也可以为悬停状态重置样式 */
+a.no-style:hover,
+a.no-style:active,
+a.no-style:visited,
+a.no-style:focus {
+    color: inherit;
+    text-decoration: none;
+    /* 在此添加悬停状态下需要重置的样式 */
+}
+
+/* 主体内容样式 */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    will-change: transform;
+    transition: all 0.5s;
+    backdrop-filter: blur(10px);
+    /* 设置磨砂效果 */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* 设置背景色为半透明白色 */
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+/* 个人作品样式 */
+#works-list a .work-item {
+    /*border-bottom: 1px solid #eee;*/
+    padding: 10px 10px;
+    transition: all 0.5s;
+    border-radius: 8px;
+}
+
+#about-me {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* 半透明白色背景 */
+    border-radius: 15px;
+    /* 圆角矩形 */
+    padding: 20px;
+    /* 内边距 */
+    margin: 20px auto;
+    /* 上下外边距为20px，左右自动居中 */
+    max-width: 800px;
+    /* 最大宽度，确保在大屏幕上内容不会过宽 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* 轻微的阴影效果 */
+    backdrop-filter: blur(10px);
+    /* 磨砂背景效果 */
+    -webkit-backdrop-filter: blur(10px);
+    /* 针对旧版Safari的磨砂背景效果 */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* 边框设置为淡白色 */
+}
+
+#about-me h2 {
+    text-align: center;
+    /* 标题居中 */
+    color: #333;
+    /* 标题文字颜色 */
+    margin-bottom: 15px;
+    /* 标题下边距 */
+}
+
+#about-me p {
+    color: #666;
+    /* 段落文字颜色 */
+    line-height: 1.6;
+    /* 行高 */
+    text-align: justify;
+    /* 段落两端对齐 */
+}
+
+
+#works-list a .work-item:last-child {
+    border-bottom: none;
+    transition: all 0.5s;
+}
+
+#works-list a .work-item:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease-in-out;
+    transition: all 0.5s;
+}
+
+/*#skills-list .skill-item:hover {
+background-color: #f9f9f9;
+transform: translateY(-5px); 
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+transition: all 0.3s ease-in-out;
+}*/
+
+/* 技能水平样式 */
+#skills-list .skill-item {
+    /*border-bottom: 1px solid #eee;*/
+    padding: 10px 10px;
+    transition: all 0.5s;
+    border-radius: 8px;
+    /* 与个人作品一致的圆角 */
+}
+
+#skills-list .skill-item:last-child {
+    border-bottom: none;
+}
+
+#skills-list .skill-item:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-5px);
+    /* 鼠标悬浮时向上移动 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* 添加阴影效果 */
+    transition: all 0.3s ease-in-out;
+    transition: all 0.5s;
+}
+
+/* 进度条背景 */
+.progress-bar {
+    background-color: #ccc;
+    border-radius: 10px;
+    height: 15px;
+    width: 100%;
+    overflow: hidden;
+    /* 隐藏溢出的部分 */
+    transition: width 0.4s ease-in-out;
+}
+
+/* 进度条填充 */
+.progress {
+    background-color: #007bff;
+    border-radius: 10px 0 0 10px;
+    /* 左边圆角 */
+    height: 15px;
+    width: 0;
+    /* 初始宽度为0 */
+    transition: width 1s ease-in-out;
+    /* 进度条动画 */
+}
+
+.progress2 {
+    background-color: #007bff;
+    border-radius: 10px 0 0 10px;
+    /* 左边圆角 */
+    height: 15px;
+    width: 0;
+    /* 初始宽度为0 */
+    transition: width 1s ease-in-out;
+    /* 进度条动画 */
+}
+
+.progress3 {
+    background-color: #007bff;
+    border-radius: 10px 0 0 10px;
+    /* 左边圆角 */
+    height: 15px;
+    width: 0;
+    /* 初始宽度为0 */
+    transition: width 1s ease-in-out;
+    /* 进度条动画 */
+}
+
+.progress4 {
+    background-color: #007bff;
+    border-radius: 10px 0 0 10px;
+    /* 左边圆角 */
+    height: 15px;
+    width: 0;
+    /* 初始宽度为0 */
+    transition: width 1s ease-in-out;
+    /* 进度条动画 */
+}
+
+.progress5 {
+    background-color: #007bff;
+    border-radius: 10px 0 0 10px;
+    /* 左边圆角 */
+    height: 15px;
+    width: 0;
+    /* 初始宽度为0 */
+    transition: width 1s ease-in-out;
+    /* 进度条动画 */
+}
+
+.progress6 {
+    background-color: #007bff;
+    border-radius: 10px 0 0 10px;
+    /* 左边圆角 */
+    height: 15px;
+    width: 0;
+    /* 初始宽度为0 */
+    transition: width 1s ease-in-out;
+    /* 进度条动画 */
+}
+
+/* 进度条动画 */
+@keyframes loadProgress {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 36%;
+    }
+}
+
+@keyframes loadProgress2 {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 72%;
+    }
+}
+
+@keyframes loadProgress3 {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 65%;
+    }
+}
+
+@keyframes loadProgress4 {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 12%;
+    }
+}
+
+@keyframes loadProgress5 {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 26%;
+    }
+}
+
+@keyframes loadProgress6 {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 85%;
+    }
+}
+
+
+
+/* 激活进度条动画 */
+.skill-item:hover .progress {
+    animation: loadProgress 1.5s forwards;
+    /* 动画名称，持续时间，结束时保持状态 */
+    animation-delay: 0.3s;
+    /* 延迟开始动画 */
+}
+
+.skill-item:hover .progress2 {
+    animation: loadProgress2 1.5s forwards;
+    /* 动画名称，持续时间，结束时保持状态 */
+    animation-delay: 0.3s;
+    /* 延迟开始动画 */
+}
+
+.skill-item:hover .progress3 {
+    animation: loadProgress3 1.5s forwards;
+    /* 动画名称，持续时间，结束时保持状态 */
+    animation-delay: 0.3s;
+    /* 延迟开始动画 */
+}
+
+.skill-item:hover .progress4 {
+    animation: loadProgress4 1.5s forwards;
+    /* 动画名称，持续时间，结束时保持状态 */
+    animation-delay: 0.3s;
+    /* 延迟开始动画 */
+}
+
+.skill-item:hover .progress5 {
+    animation: loadProgress5 1.5s forwards;
+    /* 动画名称，持续时间，结束时保持状态 */
+    animation-delay: 0.3s;
+    /* 延迟开始动画 */
+}
+
+.skill-item:hover .progress6 {
+    animation: loadProgress6 1.5s forwards;
+    /* 动画名称，持续时间，结束时保持状态 */
+    animation-delay: 0.3s;
+    /* 延迟开始动画 */
+}
+
+/* 在HTML中，你需要在每个.progress元素上设置style属性来指定width的百分比值。 */
+
+
+
+
+/* 页脚样式 */
+footer {
+    background-color: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+}
+
+/* 响应式设计 */
+@media (min-width: 992px) {
+    body {
+        padding: 0 10%;
+    }
+}

@@ -1,0 +1,229 @@
+
+
+/*去除a标签默认样式*/
+.no-style {
+    color: inherit;
+    /* 继承父元素的文字颜色 */
+    text-decoration: none;
+    /* 去除下划线 */
+    font-weight: inherit;
+    /* 继承父元素的字体粗细 */
+    font-style: inherit;
+    /* 继承父元素的字体样式，例如斜体 */
+    /* 添加任何其他需要重置的样式 */
+}
+
+/* 你也可以为悬停状态重置样式 */
+a.no-style:hover,
+a.no-style:active,
+a.no-style:visited,
+a.no-style:focus {
+    color: inherit;
+    text-decoration: none;
+    /* 在此添加悬停状态下需要重置的样式 */
+}
+
+
+
+/* 页头样式 */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+    backdrop-filter: blur(10px);
+    /* 设置磨砂效果 */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* 设置背景色为半透明白色 */
+    border-radius: 0 0 8px 8px;
+}
+
+header:hover {
+    transform: translateY(-10px);
+}
+
+header h1 {
+    margin: 10px 0;
+}
+
+header p,
+header a {
+    color: #555;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+header a:hover {
+    color: #000;
+}
+
+@media (min-width: 992px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0 10%;
+        width: 80%;
+        box-sizing: border-box;
+        z-index: 1000;
+        /* 确保顶栏位于内容之上 */
+    }
+}
+
+#container {
+    /* padding: 10px; */
+}
+
+
+body {
+    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+    margin: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.site-header {
+    /*background-color: #4a4a4a;
+color: #f0f0f0;
+padding: 10px 0;*/
+    text-align: center;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    display: inline;
+    color: #333;
+    font-size: large;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-weight: bold;
+}
+
+.article-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 120px 20px 0;
+    max-width: 100%;
+}
+
+@media (min-width: 550px) {
+.article-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    gap: 20px;
+    padding: 120px 20px 0;
+    max-width: 100%;
+}
+}
+
+.article-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.article-preview {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.5s;
+    backdrop-filter: blur(10px);
+    /* 设置磨砂效果 */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* 设置背景色为半透明白色 */
+}
+
+.article-preview:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-5px);
+    /* 鼠标悬浮时向上移动 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* 添加阴影效果 */
+    transition: all 0.3s ease-in-out;
+    transition: all 0.5s;
+}
+
+.article-preview:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.article-image {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.article-content {
+    flex: 1;
+    padding: 10px;
+}
+
+.article-content h2 {
+    font-size: 1.25rem;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.article-date,
+.article-platform {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.article-date {
+    margin: 0 0 5px 0;
+}
+
+.article-platform {
+    background-color: #e9e9e9;
+    padding: 3px 6px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .article-link {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .article-image {
+        width: auto;
+        max-height: 200px;
+        margin: 10px auto;
+        border-radius: 5px;
+    }
+
+    .article-content {
+        padding: 15px;
+    }
+}
+
+/* 页脚样式 */
+footer {
+    background-color: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+}
+
+/* 响应式设计 */
+@media (min-width: 992px) {
+    body {
+        padding: 0 10%;
+    }
+}

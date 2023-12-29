@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://q1.qlogo.cn/g?b=qq&nk=1377820366&s=40">
+    <title>树梢的小窝 | 友链列表</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="book.css">
+    <style>
+/* 页面进入时的过渡 */
+.fade-in {
+    animation: fadeIn 0.5s;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 页面退出时的过渡 */
+.fade-out {
+    animation: fadeOut 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* 定义淡入动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 定义淡出动画 */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* 确保动画在页面加载时触发 */
+body {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+    </style>
+</head>
+
+<body>
+    <a href="index.html" class="no-style exit-transition">
+        <header class="site-header">
+            <nav class="nav-menu">
+                <ul>
+                    <li>返回主页</li>
+                </ul>
+            </nav>
+        </header>
+    </a>
+    <div id="container">
+        <div class="article-list" id="content">
+            <article class="article-preview">
+                <a href="" class="article-link exit-transition">
+                    <img src="https://q1.qlogo.cn/g?b=qq&nk=1703324486&s=640" alt="头像"
+                        class="article-image">
+                    <div class="article-content">
+                        <h2>Kurumi Ծ‸Ծ</h2>
+                        <p class="article-date">发布时间：2023-11-25</p>
+                        <p class="article-date">TA的链接：无</p>
+                        <p>假如我年少有为不自卑</p>
+                        <!--<p class="article-platform">左：无</p>
+                        <p class="article-platform">无</p>
+                        <p class="article-platform">无</p>
+                        <p class="article-platform">右：无</p>
+                        <p class="article-platform">无</p>
+                        <p class="article-platform">无</p><br>
+                        <canvas id="myCanvas" width="200" height="200"></canvas>
+                        <script src="/img/myCanvas.js"></script>-->
+                    </div>
+                </a>
+            </article>
+            <article class="article-preview">
+                <a href="" class="article-link exit-transition">
+                    <img src="" alt="头像或其它有关图片"
+                        class="article-image">
+                    <div class="article-content">
+                        <h2>姓名或昵称</h2>
+                        <p class="article-date">发布时间：xxxx-xx-xx</p>
+                        <p class="article-date">TA的链接：</p>
+                        <p>个人简介</p>
+                        <!--<p class="article-platform">左：无</p>
+                        <p class="article-platform">无</p>
+                        <p class="article-platform">无</p>
+                        <p class="article-platform">右：无</p>
+                        <p class="article-platform">无</p>
+                        <p class="article-platform">无</p><br>-->
+                    </div>
+                </a>
+            </article>
+            <article class="article-preview">
+                <a href="mailto:1377820366@qq.com" class="article-link">
+                    <!--<img src="#" alt="" class="article-image">-->
+                    <div class="article-content">
+                        <h2>我也要发布！</h2>
+                        <p class="article-date">发布时间：2023-11-25</p>
+                        <p class="article-date">作者：树梢上有只鸟</p>
+                        <p>什么？你说你也是我的伙伴？当然，我的朋友！是我的遗漏，对不住了朋友，那么快点击这里发邮件给我吧！</p>
+                        <p class="article-platform">平台：树梢的小窝</p>
+                        <p class="article-platform">发布你的链接</p>
+                    </div>
+                </a>
+            </article>
+            <!-- 更多文章 -->
+        </div>
+        <!-- 页脚 -->
+        <footer style="text-align: center; padding: 20px;margin-top: 200px;">
+            <p>© 2023 <a href="#" onclick="alert('你怎么什么都点！（恼）'); return false;" class="no-style">@树梢上有只鸟</a> 版权所有</p>
+        </footer>
+    </div>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 当文档加载完成后，添加淡入效果
+    document.body.classList.add('fade-in');
+});
+// 为退出链接添加事件监听
+var exitLinks = document.querySelectorAll('.exit-transition');
+exitLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var destination = this.href;
+
+        // 添加淡出效果
+        document.body.classList.add('fade-out');
+
+        // 在动画结束后跳转到目标页面
+        setTimeout(function() {
+            window.location.href = destination;
+        }, 500); // 等待和CSS动画时间相同
+    });
+});
+
+    </script>
+</body>
+
+</html>
