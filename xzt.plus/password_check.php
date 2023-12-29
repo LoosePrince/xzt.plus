@@ -1,5 +1,5 @@
 <?php
-$correct_password = "1134";
+$correct_password = "1134"; //设置密码
 
 if (isset($_POST["password"])) {
     $input_password = $_POST["password"];
